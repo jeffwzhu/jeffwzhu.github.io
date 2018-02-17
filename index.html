@@ -1,1 +1,80 @@
-Hello World
+<!DOCTYPE HTML>
+<!-- 
+Currently using: 
+javascript, 
+jQuery, 
+mapbox/earcut for triangulation (Source)
+robust-point-in-polygon (Source) 
+-->
+<html>
+	<head>
+		<link rel="stylesheet" href="styles.css">
+		<link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
+	</head>
+	<body>
+		<div id='name'>
+			Jeffrey Zhu
+		</div>		
+		<div class='option'>
+			<a href='https://jeffwzhu.github.io/JeffreyResume.pdf'>
+			Resume
+			</a>
+		</div>
+		<div class='option'>
+			<a href='https://github.com/jeffwzhu'>
+			Github
+			</a>
+		</div>
+
+		<!-- <svg height="210" width="500">
+		  <polygon points="200,10 250,190 160,210" style="fill:lime;stroke:purple;stroke-width:1" />
+		</svg> -->
+
+		<!-- <div id="log"> Keep track of mouse position: </div> -->
+
+		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+		<script type='text/javascript'>
+			$(document).ready(function() {
+				$('body').css('background-color', 'black');
+				$(document).mousemove(function(e) {
+				    // document.Form1.posx.value = e.pageX;
+				    // document.Form1.posy.value = e.pageY;
+				    var x = e.pageX;
+				    var y = e.pageY;
+				    // var msg = "Mouse position: " + x + "," + y + ".";
+				    // $('#log').append('<div>' + msg + '</div>');
+				});
+
+				//c61313
+
+				$('#name').mouseover(function() {
+			        $(this).animate({color: '#ff006e'}, 'fast');
+				})
+				.mouseout(function() {
+			        $(this).animate({color: 'white'}, 'fast');
+				});
+				$('a').mouseover(function() {
+			        $(this).animate({color: '#00bbff'}, 'fast');
+				})
+				.mouseout(function() {
+			        $(this).animate({color: '#777777'}, 'fast');
+				});
+
+				// $('svg').mouseover(function() {
+				// 	// $(this).css('fill', 'red');
+				// 	// $('svg').css(fill: 'red');
+
+				// 	$(this).css({fill: 'red', transition: "2.0s"});
+				// })
+				// .mouseout(function() {
+				// 	// $(this).css('fill', 'white');
+				// 	// $('svg').css(fill: 'white');
+
+				// 	$(this).css({fill: 'lime', transition: "2.0s"});
+				// });
+			});
+		</script>
+	</body>
+</html>
